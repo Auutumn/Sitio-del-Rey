@@ -391,3 +391,15 @@ footer a:hover {
   border: none;
   cursor: pointer;
 }
+
+#letra{
+  color:#f5f5f5;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  white-space: pre-wrap;
+}
