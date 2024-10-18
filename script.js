@@ -107,7 +107,7 @@ document.getElementById('search-btn').addEventListener('click', () => {
     const song = document.getElementById('song').value;
 
     if (artist && song) {
-        fetch(`http://api.lyrics.ovh/v1/${artist}/${song}`)
+        fetch(`https://api.lyrics.ovh/v1/${artist}/${song}`)
             .then(response => {
                 if (!response.ok) throw new Error('Canción no encontrada');
                 return response.json();
