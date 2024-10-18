@@ -1,0 +1,393 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* tema claro y oscuro */
+:root {
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --primary-color: #111;
+  --secondary-color: #444;
+  --button-background: #333;
+  --button-text-color: #fff;
+  --footer-background: #000;
+  --footer-text-color: #fff;
+  --link-color: #fff;
+  --link-hover-color: #fca311;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #be0000;
+    --text-color: #131010;
+    --primary-color: #131010;
+    --secondary-color: #000000;
+    --button-background: #be0000;
+    --button-text-color: #1e1e1e;
+    --footer-background: #111;
+    --footer-text-color: #f4f4f4;
+    --link-color: #f4f4f4;
+    --link-hover-color: #be0000;
+  }
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-left: 8px solid var(--text-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.intermediate-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  display: none;
+}
+
+.show-content-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+h1 {
+  margin: 20px 0;
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.real-content {
+  padding: 20px;
+  max-width: 800px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--footer-background);
+  color: var(--footer-text-color);
+  text-align: center;
+  width: 100%;
+}
+
+footer a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--link-hover-color);
+}
+
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+  display: none;
+}
+
+.close-popup {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cookie-consent {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+}
+
+.cookie-consent p {
+  margin: 0;
+}
+
+.accept-cookies {
+  padding: 5px 10px;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.video-container iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 315px;
+  margin: 10px 0;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 600px) {
+  .video-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .video-container iframe {
+    width: 30%;
+  }
+}
+
+#social-media {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#social-media h2 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  padding: 10px;
+  text-align: center;
+  display: none;
+  z-index: 1000;
+}
+
+.cookie-banner p {
+  margin: 0;
+}
+
+.cookie-banner button {
+  background-color: var(--button-text-color);
+  color: var(--button-background);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Navbar oculto en el lado izquierdo */
+.navbar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  overflow: hidden;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+/* Mostrar el navbar cuando esté activo */
+.navbar.active {
+  left: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  padding: 20px;
+  border-bottom: 1px solid #444;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Botón del menú */
+.menu-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.song-item {
+  list-style: none;
+  margin: 20px 0;
+  position: relative;
+}
+
+.song-cover {
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 8px;
+}
+
+/* Ocultar el iframe del video inicialmente */
+.song-item iframe {
+  display: none;
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+}
+
+/* Mostrar el iframe al pasar el mouse */
+.song-item:hover iframe {
+  display: block;
+}
+
+/* Ocultar la imagen cuando el mouse está sobre la canción */
+.song-item:hover .song-cover {
+  display: none;
+}
+
+#search-lyrics {
+  margin: 20px 0;
+}
+
+#search-lyrics input {
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+#search-lyrics button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Jackson - El Rey del Pop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap">
+</head>
+<body>
+
+    <!-- Botón del menú -->
+    <button id="menu-btn" class="menu-btn">☰</button>
+
+    <!-- Menú de navegación -->
+    <nav id="navbar" class="navbar">
+        <ul id="nav-list"></ul>
+    </nav>
+
+    <div class="loading-screen">
+        <div class="spinner"></div>
+    </div>
+    <div class="intermediate-screen" style="display:none;">
+        <button class="show-content-btn">¡Descubre al Rey del Pop!</button>
+    </div>
+
+    <header>
+        <img src="https://logos-world.net/wp-content/uploads/2023/05/Michael-Jackson-Logo-1982.png" alt="Logotipo de Michael Jackson" class="logo">
+        <h1>El Rey del Pop</h1>
+    </header>
+
+    <div class="real-content" style="display:none;">
+        <section id="about">
+
+            <p>Nacido el 29 de agosto de 1958 en Gary, Indiana (Estados Unidos), Michael Joseph Jackson, quien más tarde sería bautizado como el 'rey del pop' por su gran amiga Elizabeth Taylor, fue el séptimo de los nueve hijos de Joseph, un operador de grúa, y Katherine Jackson, dependienta de los grandes almacenes Sears. Cantante, compositor, y bailarín Michael Jackson acabó convirtiéndose en uno de los artistas de la música pop más influyentes e icónicos de todos los tiempos e incluso podríamos decir que irremplazable.</p>
+
+            <h2>¿Quién fue?</h2>
+            <p>Michael Jackson, el indiscutible <strong>Rey del Pop</strong>, dejó una marca imborrable en la historia de la música. Este prodigio musical comenzó su viaje con los Jackson 5, pero fue en su carrera en solitario donde alcanzó la gloria. Con una combinación única de talento, innovación y carisma, Michael transformó el panorama musical, convirtiéndose en un ícono eterno.</p>
+        </section>
+
+        <section id="search-lyrics">
+            <h2>Encuentra la letra que buscas</h2>
+            <input type="text" id="artist" placeholder="Artista" required>
+            <input type="text" id="song" placeholder="Canción" required>
+            <button id="search-btn">Buscar Letra</button>
+            <p id="letra"></p>
+        </section>
+        
+          
+          <section id="famous-songs">
+            <h2>Sus temas más famosos</h2>
+            <ul>
+              <li class="song-item">
+                <!-- Imagen de la canción -->
+                <img class="song-cover" src="https://muzikalia.com/wp-content/uploads/2021/06/michael-jackson-billie-jean-portada.jpg" alt="Billie Jean">
+                <!-- Video de la canción -->
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7J1uxwnxfQLu4APicE5Rnj?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </li>
+              <li class="song-item">
+                <img class="song-cover" src="https://estacion890.blogia.com/upload/20121130173501-thriller-michael-jackson.jpg" alt="Thriller">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2LlQb7Uoj1kKyGhlkBf9aC?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </li>
+              <li class="song-item">
+                <img class="song-cover" src="https://i.pinimg.com/736x/12/76/ac/1276ac20fcbff9eb595674ec935db9d4.jpg" alt="Beat It">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3BovdzfaX4jb5KFQwoPfAw?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </li>
+              <li class="song-item">
+                <img class="song-cover" src="https://lastfm.freetls.fastly.net/i/u/500x500/1e0f971aafcb446e9eb91a3733233eb3.jpg" alt="Bad">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3tS8q8SXxtrYSN8UgeQt6q?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </li>
+              <li class="song-item">
+                <img class="song-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQtYMXi_RvGpSXkMIJNoVYFIyo9KGqvmu17Q&s" alt="Black or White">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7EsjkelQuoUlJXEw7SeVV4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </li>
+            </ul>
+          </section>
+
+          <section id="this-is">
+            <h2>Eso fue todo</h2>
+            <p>Michael se puso manos a la obra para obsequiar a sus fans con lo que mejor sabía hacer, cantar y bailar, pero el destino tenía otros planes para él y una intoxicación del anestésico Propofol en combinación con otros medicamentos suministrada por su médico personal Conrad Murray acabó con su vida el 25 de junio de 2009, dejando a medias la última gran actuación de su vida.</p>
+          </section>
+          
+
+        <section id="what-happened">
+            <h2>¿Qué le pasó?</h2>
+            <p>Su repentina muerte conmocionó al mundo, y en todos los rincones del planeta alguien lloraba la muerte del rey del pop. Su funeral celebrado el 6 de julio de 2009 en el estadio Staples Center, se convirtió en un homenaje a su música, en una reunión de amigos y en un adiós multitudinario. Allí estuvieron sus hijos, sus padres, sus hermanos y todos aquellos que en algún momento de su vida compartieron algunos minutos con Michael, cuyos restos mortales descansan hoy en el cementerio Forest Lawn de Glendale de Los Ángeles.</p>
+        </section>
+
+        <!-- Mensaje de aceptación de cookies -->
+        <div id="cookie-banner" class="cookie-banner" style="display: none;">
+            <p>Este sitio utiliza cookies para mejorar tu experiencia. <button id="accept-cookies">Aceptar</button></p>
+        </div>
+
+        <section id="awards">
+            <h2>Premios</h2>
+            <ul>
+                <li><strong>13 premios Grammy</strong> - Reconociendo su genialidad musical.</li>
+                <li><strong>25 American Music Awards</strong> - Un récord que subraya su dominio en la industria.</li>
+                <li><strong>El álbum más vendido de todos los tiempos</strong> con "Thriller" - Una hazaña sin igual.</li>
+            </ul>
+        </section>
+
+        <!-- sección Tours -->
+        <section id="tours">
+            <h2>Tours Populares</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/JyCBeaN6A_U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0ymSnL5HmOQ?si=FgzSTb-yC5Eq5koP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/Rp-o4JzofBQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Sección de redes-->
+        <section id="social-media">
+            <h2>Redes Sociales</h2>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/michaeljackson" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/michaeljackson" target="_blank">
+                    <img src="https://img.freepik.com/premium-vector/twitter-new-logo-twitter-icons-new-twitter-logo-x-2023_929078-218.jpg" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/michaeljackson" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Página seguidora del Rey del Pop. Todos los derechos reservados.</p>
+        <p>Ve más de Michael Jackson en: <a href="https://www.facebook.com/MichaelJackson">Facebook</a>, <a href="https://twitter.com/michaeljackson">Twitter</a>, <a href="https://www.instagram.com/michaeljackson">Instagram</a>.</p>
+    </footer>
+
+    <div class="popup" style="display: none;">
+        <button class="close-popup">&times;</button>
+        <h2>¡No te lo pierdas!</h2>
+        <p>Disfruta de contenido exclusivo sobre Michael Jackson. ¡Haz clic aquí para saber más!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
